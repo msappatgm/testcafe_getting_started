@@ -1,0 +1,22 @@
+{
+  "reporter": [
+    {
+      "name": "spec"
+    },
+    {
+      "name": "allure-plus"
+    }
+  ],
+  "compilerOptions": {
+    "typescript": {
+      "configPath": "./tsconfig.json"
+    }
+  },
+  "hostname": "localhost",
+  "port": "9000",
+  "pageLoadTimeout": 10000,
+  "selectorTimeout": 10000,
+  "disableMultipleWindows": true,
+  "skipJsErrors": true,
+  "nativeAutomation": true
+}
