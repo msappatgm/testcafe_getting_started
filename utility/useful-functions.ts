@@ -1,25 +1,31 @@
-/*
-import { ClientFunction } from 'testcafe';
-  
-export const waitUntilPageToBeReady = async(pageUrl: string) => {
-    const documentRedyState = ClientFunction(() => document.readyState);
-    let isPageLoaded: boolean;
-    const startTime = Date.now();
-    let endTime: number;
-    do {
-      isPageLoaded = await documentRedyState() === 'complete' && (await currentPageUrl).includes(pageUrl);
-      endTime = Date.now();
-    } while (!isPageLoaded && (endTime - startTime) <= 45000);
+import { ClientFunction, Selector, t } from 'testcafe';
 
-    return isPageLoaded;
-  }
-  
-export const waitForElement = async (locator: string, timeout?: number) => {
-    return
+export const getCurrentPageUrl = ClientFunction(() => document.location.href.toString());
+
+export const waitForPageToBeReady = async (url: string, locator?: string, timeout: number = 60000) => {
+    const isPageReady = ClientFunction(() => document.readyState === 'complete');
+    await t.expect(isPageReady()).ok({ timeout: timeout });
+
+    await t.expect(getCurrentPageUrl()).contains(url, undefined, { timeout: timeout });
+
+    if (locator) {
+        const element = Selector(locator).with({ visibilityCheck: true, timeout: timeout });
+        await t.expect(element.visible).ok();
+    }
+
+    if (timeout) {
+        await t.wait(timeout);
+    }
 }
 
-// Returns a string of the current URL
-export const currentPageUrl = async () => {
-    return ClientFunction(() => document.location.href.toString())();
+export const waitForElement = async (locator: string, timeout: number = 60000) => {
+    const isPageReady = ClientFunction(() => document.readyState === 'complete');
+    await t.expect(isPageReady()).ok({ timeout: timeout });
+    
+    const element = Selector(locator).with({ visibilityCheck: true, timeout: timeout });
+    await t.expect(element.visible).ok();
+
+    if (timeout) {
+        await t.wait(timeout);
+    }
 }
-*/
