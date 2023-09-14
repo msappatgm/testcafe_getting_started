@@ -6,6 +6,6 @@
  */
 
 fixture('Explore - Planning navigation exercise')
-    it('Should login to Explore then navigate to Planning', async t => {
+    test('Should login to Explore then navigate to Planning', async t => {
       // Code goes here
     });
