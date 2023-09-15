@@ -1,4 +1,4 @@
-import { waitForPageToBeReady } from '../../utility/useful-functions';
+import { waitForPageToBeReady } from '../../../utility/useful-functions';
 
 fixture('Show off how to hover elements')
     .page('https://digital.uat.greatminds.dev/')

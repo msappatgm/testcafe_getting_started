@@ -1,4 +1,4 @@
-import { waitForPageToBeReady } from '../../utility/useful-functions';
+import { waitForPageToBeReady } from '../../../utility/useful-functions';
 import { Selector, t } from 'testcafe';
 
 class LoginPage {

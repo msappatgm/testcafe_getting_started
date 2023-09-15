@@ -8,7 +8,7 @@
  * If we did not await certain functions, such as clicking on elements then we run the risk of having a race condition inside our tests which could have adverse side effects (sounds kinda like a doctor prescribing medication)
  * This process is best explained by walking through the waitForPageToBeReady function located in /utility/useful-functions.ts
  */
-import { getCurrentPageUrl } from '../../utility/useful-functions';
+import { getCurrentPageUrl } from '../../../utility/useful-functions';
 import { ClientFunction } from 'testcafe';
 
 fixture('Explaining the asynchronous process of WebDriverIO')

@@ -48,6 +48,8 @@ Currently, as of 08/17/2023, the provided practice TC's are:
 - create assignment through assign
 - launch a livemode presentation
 
+In addition to the above UI tests, I've added an API example that utilizes the [The Metropolitan Museum of Art Collection's](https://metmuseum.github.io/) public API. It doesn't require any authentication which makes it perfect for quick testing. 
+
 ### Utilities
 The purpose of this part is more so to provide useful functions that we use everyday on the SIT pod.
 

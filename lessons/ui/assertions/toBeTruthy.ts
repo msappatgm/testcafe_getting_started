@@ -1,4 +1,4 @@
-import { waitForPageToBeReady } from '../../utility/useful-functions';
+import { waitForPageToBeReady } from '../../../utility/useful-functions';
 import { Selector } from 'testcafe';
 
 fixture('Validating that something should equal true')

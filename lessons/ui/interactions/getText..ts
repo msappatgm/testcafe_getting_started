@@ -1,4 +1,4 @@
-import { waitForPageToBeReady } from '../../utility/useful-functions';
+import { waitForPageToBeReady } from '../../../utility/useful-functions';
 import { Selector } from 'testcafe';
 
 fixture('Show off how to pull text from the page')
