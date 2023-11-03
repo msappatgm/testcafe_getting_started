@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "testcafe chrome lessons/**/*.ts playground/**/*.ts",
-    "test-headless": "testcafe chrome:headless lessons/**/*.ts playground/**/*.ts"
+    "test-headless": "testcafe chrome:headless lessons/**/*.ts playground/**/*.ts",
+    "test-file": "testcafe chrome"
   },
   "author": "Mark \"Mork\" Sapp",
   "license": "ISC",

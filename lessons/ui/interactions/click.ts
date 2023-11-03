@@ -13,6 +13,7 @@ test('Should show off how to click an element', async t => {
 });
 
 test('Should show off how to double click an element', async t => {
+  await t.click('button[class*="LoginWithEmail"]')
   await t.doubleClick('#email')
   await t.typeText('#email', 'BingoBongo@gmail.com')
   await t.doubleClick('#password')

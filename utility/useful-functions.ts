@@ -12,10 +12,6 @@ export const waitForPageToBeReady = async (url: string, locator?: string, timeou
         const element = Selector(locator).with({ visibilityCheck: true, timeout: timeout });
         await t.expect(element.visible).ok();
     }
-
-    if (timeout) {
-        await t.wait(timeout);
-    }
 }
 
 export const waitForElement = async (locator: string, timeout: number = 30000) => {
