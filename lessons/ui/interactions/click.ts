@@ -1,6 +1,5 @@
 import { waitForPageToBeReady } from '../../../utility/useful-functions';
 import { Selector } from 'testcafe';
-import { fixture } from "testcafe";
 
 fixture('Example Click Interactions')
     .page('https://digital.uat.greatminds.dev/')
