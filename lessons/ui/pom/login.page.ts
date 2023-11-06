@@ -27,7 +27,7 @@ class LoginPage {
     }
 
     get inputPassword() {
-        return this._inputPassword;
+        return this._inputPassword;        
     }
 
     get btnSubmit() {
