@@ -14,7 +14,7 @@ class LoginOperations {
   }
 
   public async loginWithEmail(username: string, password: string) {
-    await waitForPageToBeReady('');
+    await waitForPageToBeReady();
     await t.click(loginPage.loginWithEmailBtn)
     await this.inputCred(username, password)
     await this.clickLoginBtn()
