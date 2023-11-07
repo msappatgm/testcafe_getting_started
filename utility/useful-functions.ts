@@ -20,8 +20,4 @@ export const waitForElement = async (locator: string, timeout: number = 30000) =
     
     const element = Selector(locator).with({ visibilityCheck: true, timeout: timeout });
     await t.expect(element.visible).ok();
-
-    if (timeout) {
-        await t.wait(timeout);
-    }
 }
