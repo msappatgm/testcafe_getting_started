@@ -15,7 +15,6 @@ fixture('Authentication Tests Go Here').page('https://digital.uat.greatminds.dev
     test('Should allow an EM2 user to login', async t => {
       await loginOperations.loginWithEmail('doh_em2_teacher1@greatmindsdemo.org','Test@123')
       await waitForPageToBeReady('explore')
-      // await exploreOperations.verifyHeaderText()
     });
 
     test('Should allow a Geodes user to login', async t => {

@@ -2,7 +2,7 @@ import { ClientFunction, Selector, t } from 'testcafe';
 
 export const getCurrentPageUrl = ClientFunction(() => document.location.href.toString());
 
-export const waitForPageToBeReady = async (url: string = '', locator?: string, timeout: number = 30000) => {
+export const waitForPageToBeReady = async (url: string = '', locator?: string, timeout: number = 60000) => {
     const isPageReady = ClientFunction(() => document.readyState === 'complete');
     await t.expect(isPageReady()).ok({ timeout: timeout });
 
