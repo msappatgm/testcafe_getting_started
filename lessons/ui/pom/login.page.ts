@@ -10,6 +10,9 @@ class LoginPage {
     private _confirmPasswordInput;
     private _loginToCmsBtn;
     private _emailErrorMessage;
+    private _newPassword;
+    private _confirmNewPassword;
+    private _setPasswordBtn;
 
     constructor() {
         this._inputEmail = Selector('input#email');
@@ -20,6 +23,9 @@ class LoginPage {
         this._confirmPasswordInput= Selector('#confirmPassword');
         this._loginToCmsBtn = Selector('button[color="primary"]');
         this._emailErrorMessage = Selector('#helper-message-email');
+        this._newPassword = Selector('input[id="newPassword"]');
+        this._confirmNewPassword = Selector('input[id="confirmPassword"]');
+        this._setPasswordBtn = Selector('button[class*="SetPassword"]');
     }
 
     get inputEmail() {
@@ -52,6 +58,18 @@ class LoginPage {
 
     get emailErrorMessage() {
         return this._emailErrorMessage;
+    }
+
+    get newPassword() {
+        return this._newPassword;
+    }
+
+    get confirmNewPassword() {
+        return this._confirmNewPassword;
+    }
+
+    get setPasswordBtn() {
+        return this._setPasswordBtn;
     }
     
     async waitForLoginPage() {
