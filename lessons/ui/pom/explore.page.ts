@@ -9,7 +9,6 @@ class ExplorePage {
         this._pageHeader = Selector('h1[class*="GlobalHeaderstyled"]')
         this._moduleOverviewButton = Selector('a[data-dp-analytics-id*="ModuleOverview"]')
         this._levelDropdown = Selector('button[aria-controls="menu-courses"]')
-        
     }
 
     get pageHeader() {

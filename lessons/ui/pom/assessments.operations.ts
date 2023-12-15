@@ -1,6 +1,6 @@
 import { waitForElement } from "../../../utility/useful-functions";
 import { assessmentsPage } from "./assessments.page";
-import { Selector, t } from 'testcafe';
+import { t } from 'testcafe';
 
 class AssessmentsOperations {
     public async clickLibraryBtn() {
@@ -8,7 +8,7 @@ class AssessmentsOperations {
     }
 
     public async multiSelectDropdownItem(list: string[]) {
-        for (var item of list) {
+        for (let item of list) {
             await t.click(assessmentsPage.getMultiSelectDropdownItemCheckbox(item))
         }
     }

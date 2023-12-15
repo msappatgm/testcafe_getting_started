@@ -10,29 +10,30 @@
 
 import { loginOperations } from "../../lessons/ui/pom/login.operations";
 import { waitForPageToBeReady } from "../../utility/useful-functions";
+import 'dotenv/config';
 
 fixture('Authentication Tests Go Here').page('https://digital.uat.greatminds.dev/')
     test('Should allow an EM2 user to login', async t => {
-      await loginOperations.loginWithEmail('doh_em2_teacher1@greatmindsdemo.org','Test@123')
+      await loginOperations.loginWithEmail(process.env.EM2_LOGIN,process.env.PASS)
       await waitForPageToBeReady('explore')
     });
 
     test('Should allow a Geodes user to login', async t => {
-      await loginOperations.loginWithEmail('doh_geodes_teacher1@greatmindsdemo.org','Test@123')
+      await loginOperations.loginWithEmail(process.env.GEODES_LOGIN,process.env.PASS)
       await waitForPageToBeReady('geodes')
     });
 
     test('Should allow a Affirm user to login', async t => {
-      await loginOperations.loginWithEmail('doh_affirm_teacher1@greatmindsdemo.org','Test@123')
+      await loginOperations.loginWithEmail(process.env.AFFIRM_LOGIN,process.env.PASS)
       await waitForPageToBeReady('assessments')
     });
 
     test('Should allow a Insync user to login', async t => {
-      await loginOperations.loginWithEmail('doh_insync_teacher1@greatmindsdemo.org','Test@123')
+      await loginOperations.loginWithEmail(process.env.INSYNC_LOGIN,process.env.PASS)
       await waitForPageToBeReady('insync')
     });
 
     test('Should allow a EM2 + EM2TN user to login', async t => {
-      await loginOperations.loginWithEmail('doh_multi_teacher1@greatmindsdemo.org','Test@123')
+      await loginOperations.loginWithEmail(process.env.EM2_EM2TN_LOGIN,process.env.PASS)
       await waitForPageToBeReady('explore', 'h3[class*="StyledSubtitle"]')
     });
